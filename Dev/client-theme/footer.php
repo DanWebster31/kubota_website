@@ -10,8 +10,8 @@ global $scriptsFooter;
 <footer id="footer" class="bgtertiary">
   <div class="wrapper pad3-0 tcenter">
     <img id="footer-logo" src="<?= the_field('logo','option'); ?>" alt="Kubota & Craig">
-    <h2 class="tprimary">Call <?= the_field('phone','option'); ?></h2>
-    <p id="copyright" class="twhite">Copyright &copy;<?= date(Y); ?> Kubota & Craig. All Rights Reserved. &nbsp; <a href="/privacy-policy/">Privacy&nbsp;Policy</a> &nbsp; <a href="/website-guide/">Website&nbsp;Guide</a>.</p>
+    <p id="copyright" class="twhite">Copyright &copy;<?= date(Y); ?> Kubota & Craig. All Rights Reserved.</p>
+      <!-- <a href="/privacy-policy/">Privacy&nbsp;Policy</a> &nbsp; <a href="/website-guide/">Website&nbsp;Guide</a>. -->
   </div>
 </footer>
 

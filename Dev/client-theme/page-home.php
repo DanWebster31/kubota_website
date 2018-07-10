@@ -11,13 +11,13 @@ $scriptsFooter = 'js/contrib/one-page-nav.js, js/home.js, js/global.js';
 
 get_header(); ?>
 
-<!-- <section id="about-us">
+<section id="about-us">
   <div class="wrapper pad4-0 tcenter">
     <h2 class="hometitle tprimary-dark tcenter upper">About Us</h2>
     <?php the_field('about_us_text'); ?>
     <div class="injury-icon tcenter"><img src="<?= get_template_directory_uri(); ?>/images/home/injury-icon.png" alt="injury"></div>
   </div>
-</section> -->
+</section>
 
 <section id="team" class="bgsecondary marb2">
 
@@ -50,70 +50,70 @@ get_header(); ?>
 
 </section>
 
-<section id="client-list" class="fixedbg">
+<!-- <section id="client-list" class="fixedbg">
   <div class="wrapper pad3-0 tcenter">
     <h2 class="hometitle">CLIENT LIST</h2>
     <p>Kubota & Craig has hosted a number of large productions, including:</p>
     <div class="third-gutter1 mart2 clearfix">
 
-        <?php if( have_rows('clients_left') ): ?>
+        <?php //if( have_rows('clients_left') ): ?>
             <ul class="third left">
-            <?php while ( have_rows('clients_left') ) : the_row(); ?>
-              <li><?php the_sub_field('client_name'); ?></li>
-            <?php endwhile; ?>
+            <?php //while ( have_rows('clients_left') ) : the_row(); ?>
+              <li><?php //the_sub_field('client_name'); ?></li>
+            <?php //endwhile; ?>
             </ul>
-          <?php endif; ?>
+          <?php //endif; ?>
 
-          <?php if( have_rows('clients_middle') ): ?>
+          <?php //if( have_rows('clients_middle') ): ?>
               <ul class="third left">
-              <?php while ( have_rows('clients_middle') ) : the_row(); ?>
-                <li><?php the_sub_field('client_name'); ?></li>
-              <?php endwhile; ?>
+              <?php //while ( have_rows('clients_middle') ) : the_row(); ?>
+                <li><?php //the_sub_field('client_name'); ?></li>
+              <?php //endwhile; ?>
               </ul>
-          <?php endif; ?>
+          <?php //endif; ?>
 
-            <?php if( have_rows('clients_right') ): ?>
+            <?php //if( have_rows('clients_right') ): ?>
                 <ul class="third left">
-                <?php while ( have_rows('clients_right') ) : the_row(); ?>
-                  <li><?php the_sub_field('client_name'); ?></li>
-                <?php endwhile; ?>
+                <?php //while ( have_rows('clients_right') ) : the_row(); ?>
+                  <li><?php //the_sub_field('client_name'); ?></li>
+                <?php //endwhile; ?>
                 </ul>
-            <?php endif; ?>
+            <?php //endif; ?>
     </div>
   </div>
-</section>
+</section> -->
 
-<section id="testimonials" class="bgtertiary">
+<!-- <section id="testimonials" class="bgtertiary">
 
     <h2 class="hometitle twhite tcenter upper">Testimonials</h2>
 
     <div id="testimonials-slideshow" class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-swipe="true" data-cycle-pause-on-hover="true" data-cycle-speed="500" data-cycle-slides="> .testimonial-box">
 
-      <?php if( have_rows('testimonials') ): ?>
-          <?php while ( have_rows('testimonials') ) : the_row(); ?>
-            <div class="testimonial-box cover" style="background-image: url('<?php the_sub_field('testimonials_background_image'); ?>')">
+      <?php //if( have_rows('testimonials') ): ?>
+          <?php //while ( have_rows('testimonials') ) : the_row(); ?>
+            <div class="testimonial-box cover" style="background-image: url('<?php //the_sub_field('testimonials_background_image'); ?>')">
               <div class="wrapper">
-              <?php the_sub_field('testimonial_text'); ?>
+              <?php //the_sub_field('testimonial_text'); ?>
               <div class="fade-cover"></div>
-              <img class="testimonial-logo" src="<?php the_sub_field('testimonial_logo'); ?>" alt="">
+              <img class="testimonial-logo" src="<?php //the_sub_field('testimonial_logo'); ?>" alt="">
               </div>
             </div>
-          <?php endwhile; ?>
-      <?php endif; ?>
+          <?php //endwhile; ?>
+      <?php //endif; ?>
 
     	<div class="cycle-prev gallery-left"><img src="<?= get_template_directory_uri(); ?>/images/global/arrow-left.svg" ></div>
   		<div class="cycle-next gallery-right"><img src="<?= get_template_directory_uri(); ?>/images/global/arrow-right.svg" ></div>
 		</div>
 
-</section>
+</section> -->
 
 
 <section id="contact-us">
   <div class="wrapper pad3-0">
     <h2 class="hometitle tprimary-dark tcenter upper">Contact Us</h2>
-    <p class="tcenter">For more information about Kubota & Craig, please call or submit the following information. We look forward to hearing from you.</p>
-    <h3 class="tprimary-dark tcenter pad1-0"><?php the_field('contact_name', 'option'); ?> &nbsp;|&nbsp; <?php the_field('contact_title', 'option'); ?> &nbsp;|&nbsp; <?php the_field('phone', 'option'); ?></h3>
-
+    <p class="tcenter">For more information about Kubota & Craig, please call or email us. We look forward to hearing from you.</p>
+    <h2 class="tprimary tcenter"><?= the_field('contact_phone','option'); ?> &nbsp;&nbsp; <a class="tprimary tcenter" href="mailto:<?= the_field('contact_email','option'); ?>"><?= the_field('contact_email','option'); ?></a></h2>
+<!--
     <form name="interest-list" id="interest-list" class="clearfix">
 
     			<input name="notification" type="hidden" value="p11creative@gmail.com" />
@@ -127,22 +127,19 @@ get_header(); ?>
     			<div id="sec1" class="half left">
 
     				<div class="fielditem">
-    					<!-- <label for="firstName">First Name*</label> -->
+
     					<input type="text" class="required" required name="firstName" id="firstName" placeholder="FIRST NAME*" value="" />
     				</div>
 
     				<div class="fielditem">
-    					<!-- <label for="lastName">Last Name*</label> -->
     					<input type="text" class="required" required name="lastName" id="lastName" placeholder="LAST NAME*" value="" />
     				</div>
 
     				<div class="fielditem">
-    					<!-- <label for="email">Email*</label> -->
     					<input type="email" class="required" required name="email" id="email" placeholder="EMAIL*" value="" />
     				</div>
 
     				<div class="fielditem">
-    					<!-- <label for="phone">Phone</label> -->
     					<input type="text" name="phone" id="phone" placeholder="PHONE" value="" />
     				</div>
 
@@ -151,7 +148,6 @@ get_header(); ?>
     			<div id="sec2" class="left half">
 
             <div  class="fielditem">
-              <!-- <label for="comments">Comments</label> -->
               <textarea id="comments" name="comments" placeholder="COMMENTS"></textarea>
             </div>
 
@@ -162,7 +158,7 @@ get_header(); ?>
     				<input type="submit" value="SUBMIT" id="submitbutton" class="trans" />
     			</div>
 
-    		</form>
+    		</form> -->
 
 
   </div>
