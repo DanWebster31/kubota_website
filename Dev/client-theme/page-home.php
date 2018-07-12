@@ -40,6 +40,8 @@ get_header(); ?>
         <div class="team-member-text">
           <h2><?php the_sub_field('team_member_name'); ?></h2>
           <h3><?php the_sub_field('team_member_title'); ?></h3>
+        </div>
+        <div class="team-member-bio">
           <p><?php the_sub_field('team_member_bio'); ?></p>
         </div>
       </div>
