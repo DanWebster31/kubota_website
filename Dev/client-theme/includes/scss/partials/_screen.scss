@@ -905,11 +905,14 @@ ol li {
       background: rgba( $color-black, 0.5);
       padding-bottom: 1em;
 
+<<<<<<< HEAD
       @media screen and (max-width: 1400px) {
         width: 100%;
         margin-bottom: 1.5em;
       }
 
+=======
+>>>>>>> origin/master
       .team-member-photo {
         width: 40%;
         max-width: 350px;
@@ -959,9 +962,14 @@ ol li {
         height: auto;
         float: left;
         padding: 1em 0;
+<<<<<<< HEAD
 
         h2 {
           font-size: 2.4em;
+=======
+        h2 {
+          font-size: 2.2vw;
+>>>>>>> origin/master
           letter-spacing: 0.1em;
           line-height: 1.5em;
           color: $color-primary;
@@ -985,6 +993,7 @@ ol li {
             font-size: 1em;
           }
         }
+<<<<<<< HEAD
 
         .team-member-bio {
           position: absolute;
@@ -1002,6 +1011,22 @@ ol li {
               font-size: 0.9em;
             }
           }
+=======
+      }
+
+      .team-member-bio {
+        position: absolute;
+        right: 17px;
+        bottom: 10px;
+        top: 20%;
+        width: 57%;
+        overflow: auto;
+        padding: 0 1em 1em 0;
+        p {
+          font-size: 1em;
+          line-height: 1.4em;
+          color: $color-white;
+>>>>>>> origin/master
         }
 
       }
