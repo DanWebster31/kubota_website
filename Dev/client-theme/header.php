@@ -130,11 +130,14 @@ if ($iphone || $android || $palmpre || $ipod || $berry || $ipad == true) { ?>
         <div class="slide cover parallax-bg" style="background-image: url('<?= $image['url']; ?>');"></div>
         <?php endforeach; ?>
 
-      <?php if(is_page('home')) { ?>
-        <h1 id="page-title"><?= the_field('slide_text'); ?></h1>
-      <?php } else { ?>
-        <h1 id="page-title"><?php the_title(); ?></h1>
-      <?php } ?>
+        <?php if(is_page('home')) { ?>
+          <div id="page-title">
+            <h1><?= the_field('slide_text'); ?></h1>
+            <h2><?= the_field('slide_sub'); ?></h2>
+          </div>
+        <?php } else { ?>
+          <div id="page-title"><h1><?php the_title(); ?></h1></div>
+        <?php } ?>
 
       <a id="downarrow" href="javascript:goToByScroll('about-us');"><img src="<?= get_template_directory_uri(); ?>/images/home/arrow-down.svg"></a>
 

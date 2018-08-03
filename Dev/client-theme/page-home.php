@@ -30,17 +30,26 @@ get_header(); ?>
   <?php if( have_rows('team_members') ): ?>
     <?php $count = 0; ?>
     <?php while ( have_rows('team_members') ) : the_row(); ?>
-      <?php $image = get_sub_field('team_member_photo'); ?>
+      <?php $image = get_sub_field('photo'); ?>
       <?php if ( $count %2 != 0 ) { ?>
       <div class="team-member pushleft">
       <?php } else { ?>
         <div class="team-member pushright">
       <?php } ?>
-        <div class="team-member-photo"><img src="<?php echo $image['url']; ?>" /></div>
+        <div class="team-member-photo">
+          <img src="<?php echo $image['url']; ?>" />
+          <div class="team-member-info">
+            <a href="mailto:<?= the_sub_field('email'); ?>">
+            <img src="<?= get_template_directory_uri(); ?>/images/global/email.svg" alt="email"><h2>Email <?php the_sub_field('email_name'); ?></h2>
+          </a>
+          </div>
+        </div>
         <div class="team-member-text">
-          <h2><?php the_sub_field('team_member_name'); ?></h2>
-          <h3><?php the_sub_field('team_member_title'); ?></h3>
-          <p><?php the_sub_field('team_member_bio'); ?></p>
+          <h2><?php the_sub_field('name'); ?></h2>
+          <h3><?php the_sub_field('title'); ?></h3>
+          <div class="team-member-bio">
+            <p><?php the_sub_field('bio'); ?></p>
+          </div>
         </div>
       </div>
       <?php $count++; ?>
@@ -111,8 +120,10 @@ get_header(); ?>
 <section id="contact-us">
   <div class="wrapper pad3-0">
     <h2 class="hometitle tprimary-dark tcenter upper">Contact Us</h2>
-    <p class="tcenter">For more information about Kubota & Craig, please call or email us. We look forward to hearing from you.</p>
-    <h2 class="tprimary tcenter"><?= the_field('contact_phone','option'); ?> &nbsp;&nbsp; <a class="tprimary tcenter" href="mailto:<?= the_field('contact_email','option'); ?>"><?= the_field('contact_email','option'); ?></a></h2>
+    <p class="tcenter">For more information about Kubota & Craig, please give us a call. We look forward to hearing from you.</p>
+    <div class="contact-row">
+      <h2 class="tprimary tcenter"><img src="<?= get_template_directory_uri(); ?>/images/global/phone.svg" alt="call"> <?= the_field('contact_phone','option'); ?></h2>
+  </div>
 <!--
     <form name="interest-list" id="interest-list" class="clearfix">
 

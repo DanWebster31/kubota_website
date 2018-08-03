@@ -56,6 +56,9 @@ li {
 
 p {
   font-size: 1.125em;
+  @media screen and (max-width: 1000px) {
+    font-size: 0.9em;
+  }
 }
 
 p.small {
@@ -518,6 +521,12 @@ header {
     width: 100%;
     height: 350px;
     z-index: 500;
+    @media screen and (max-width: 1000px) {
+      height: 200px;
+    }
+    @media screen and (max-width: 600px) {
+      height: 150px;
+    }
   }
 
   #slidergrad-top {
@@ -539,24 +548,31 @@ header {
 
 }
 
-h1#page-title {
+#page-title {
   display: block;
   width: 100%;
   position: absolute;
-  left: 0;
-  bottom: 1.75em;
-  font-size: 2.5em;
   z-index: 500;
+  left: 0;
+  bottom: 4.5em;
   text-align: center;
-  color: $color-white;
-
-  @include mq-md-lg {
-    font-size: 2em;
+  @media screen and (max-width: 700px) {
     bottom: 2em;
   }
-  @include mq-sm {
-    font-size: 1.75em;
-    bottom: 1em;
+  h1 {
+    font-size: 2.4em;
+    color: $color-white;
+    margin-bottom: 0.5em;
+    @media screen and (max-width: 700px) {
+      font-size: 5.5vw;
+    }
+  }
+  h2 {
+    font-size: 1.9em;
+    color: $color-primary;
+    @media screen and (max-width: 700px) {
+      font-size: 4.9vw;
+    }
   }
 }
 
@@ -876,14 +892,24 @@ ol li {
     position: relative;
     background: $color-secondary;
     float: left;
-     > div:nth-child(even) {
+    > div:nth-child(even) {
       float: right;
+      @media screen and (max-width: 1400px) {
+        float: left;
+      }
     }
     .team-member {
       width: 49.5%;
-      height: auto;
+      height: 70vh;
       float: left;
       background: rgba( $color-black, 0.5);
+      padding-bottom: 1em;
+
+      @media screen and (max-width: 1400px) {
+        width: 100%;
+        margin-bottom: 1.5em;
+      }
+
       .team-member-photo {
         width: 40%;
         max-width: 350px;
@@ -894,17 +920,57 @@ ol li {
           width: 100%;
           height: auto;
         }
+        .team-member-info {
+          width: 100%;
+          float: left;
+          text-align: center;
+          padding: 1em 0.2em;
+          a {
+            text-decoration: none;
+          }
+          h2 {
+            display: inline-block;
+            font-size: 1.3em;
+            color: $color-primary;
+            margin-left: 0.8em;
+            vertical-align: middle;
+            @media screen and (max-width: 1500px) {
+              font-size: 1.2em;
+            }
+            @media screen and (max-width: 1000px) {
+              font-size: 1.1em;
+            }
+            @media screen and (max-width: 600px) {
+              font-size: 2.6vw;
+            }
+          }
+          img {
+            display: inline-block;
+            width: 2vw;
+            max-width: 24px;
+            min-width: 14px;
+            height: auto;
+            vertical-align: middle;
+          }
+        }
       }
       .team-member-text {
-        width: 57%;
+        width: 59%;
         height: auto;
         float: left;
-        padding-top: 1em;
+        padding: 1em 0;
+
         h2 {
-          font-size: 2.3em;
+          font-size: 2.4em;
           letter-spacing: 0.1em;
           line-height: 1.5em;
           color: $color-primary;
+          @media screen and (max-width: 1500px) {
+            font-size: 1.8em;
+          }
+          @media screen and (max-width: 1000px) {
+            font-size: 1.3em;
+          }
         }
         h3 {
           font-size: 1.3em;
@@ -912,12 +978,32 @@ ol li {
           margin-bottom: 0.5em;
           color: lighten($color-secondary, 20%);
           text-transform: uppercase;
+          @media screen and (max-width: 1500px) {
+            font-size: 1.2em;
+          }
+          @media screen and (max-width: 1000px) {
+            font-size: 1em;
+          }
         }
-        p {
-          font-size: 1em;
-          line-height: 1.4em;
-          color: $color-white;
+
+        .team-member-bio {
+          position: absolute;
+          bottom: 20px;
+          top: 15%;
+          width: 55%;
+          overflow: auto;
+          padding: 0 1.5em 1.5em 0;
+          border-bottom: $color-primary 1px solid;
+          p {
+            font-size: 1em;
+            line-height: 1.4em;
+            color: $color-white;
+            @media screen and (max-width: 1000px) {
+              font-size: 0.9em;
+            }
+          }
         }
+
       }
 
     }
@@ -1390,6 +1476,37 @@ ol li {
   h4 {
     line-height: 2em;
   }
+
+  .contact-row {
+    width: 100%;
+    text-align: center;
+    padding: 0.4em;
+    a {
+      text-decoration: none;
+    }
+    h2 {
+      display: inline-block;
+      font-size: 1.7em;
+      color: $color-primary;
+      margin-left: 1em;
+      vertical-align: middle;
+      @media screen and (max-width: 1500px) {
+        font-size: 1.5em;
+      }
+      @media screen and (max-width: 1000px) {
+        font-size: 1.3em;
+      }
+    }
+    img {
+      display: inline-block;
+      width: 1.8vw;
+      max-width: 24px;
+      min-width: 16px;
+      height: auto;
+      vertical-align: middle;
+    }
+  }
+
 }
 
 /** DIRECTIONS **/
